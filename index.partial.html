@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkout Page By Meow.Nalini98</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+  
+  * {
+    color: #001a33;
+  }
+  body,h1,h2,h3,h4,h5,h6,.w3-wide, .w3-sidebar a{
+    font-family: "Roboto", sans-serif;
+    size: 16px;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+    }
+  
+  #meowimg {
+    margin-right: 30px;
+    width: 100%;
+  }
+  
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 8px;
+  border: 1px solid #e6f2ff;
+  border-radius: 5px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+  color: 
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #004080;
+  color: #fff;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #b3d9ff;
+  color: #000;
+  font-size: 17px;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+} 
+
+</style>
+
+
+
+<body>
+
+  <div class="row">
+    <div class="col-75">
+      <div class="container">
+        <form action="/action_page.php">
+  
+          <div class="row">
+            <div class="col-50">
+              <h3>Billing Address</h3>
+              <label for="fname"><i class="fa fa-user"></i>  Full Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Nalini Vo">
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="email" name="email" placeholder="nalinivo1998@gmail.com">
+              <label for="adr"><i class="fa fa-home"></i> Address</label>
+              <input type="text" id="adr" name="address" placeholder="38 Nguyen Van Troi Str.">
+              <label for="city"><i class="fa fa-institution"></i> City</label>
+              <input type="text" id="city" name="city" placeholder="Ho Chi Minh">
+  
+              <div class="row">
+                <div class="col-50">
+                  <label class = "fa fa-angle-down" for="state"> State</label>
+                  <input type="text" id="state" name="state" placeholder="HCMC">
+                </div>
+                <div class="col-50">
+                  <label class = "fa fa-angle-down" for="zip"> Zip</label>
+                  <input type="text" id="zip" name="zip" placeholder="700000">
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-50">
+              <h3>Payment</h3>
+              <label for="fname">Accepted Cards</label>
+              <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-paypal" style="color:blue;"></i>
+                <i class="fa fa-cc-amex" style="color:green;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+              </div>
+              <label class="	fa fa-vcard" for="cname"> Name on Card</label>
+              <input type="text" id="cname" name="cardname" placeholder="Nalini Vo">
+              <label class="	fa fa-slack" for="ccnum"> Credit card number</label>
+              <input type="text" id="ccnum" name="cardnumber" placeholder="(+84) 385 806 448">
+              <label class="fa fa-calendar-check-o"  for="expmonth"> Exp Month</label>
+              <input type="text" id="expmonth" name="expmonth" placeholder="July">
+  
+              <div class="row">
+                <div class="col-50">
+                  <label class="fa fa-angle-down" for="expyear"> Exp Year</label>
+                  <input type="text" id="expyear" name="expyear" placeholder="2023">
+                </div>
+                <div class="col-50">
+                  <label class="fa fa-angle-down" for="cvv"> CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="352">
+                </div>
+              </div>
+            </div>
+  
+          </div>
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+          </label>
+          <input type="submit" value="Continue to checkout" class="btn">
+        </form>
+      </div>
+    </div>
+  
+    <div class="col-25">
+      <div class="container">
+        <h4>Cart
+          <span class="price" style="color:black">
+            <i class="fa fa-shopping-cart"></i>
+            <b>4</b>
+          </span>
+        </h4>
+        <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+        <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+        <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+        <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+        <hr>
+        <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+        <img id="meowimg" src="https://i.pinimg.com/originals/2f/99/3e/2f993eb7ef2d5a47e93c20a838f7e38d.gif" alt="Meow.Nalini98"></img>
+      </div>
+          <p class="fa fa-github-square w3-block w3-white w3-hover-opacity w3-animate-zoom w3-center"><a href="https://github.com/Nalini1998"  target="_blank"><b> Nalini1998</b></a></p>
+    <label class="fa fa-file-pdf-o w3-block w3-white w3-hover-opacity w3-animate-zoom w3-center" onclick="window.print()"><b> Print out this page</b></label>
+    </div> 
+
+  </div>
+<script>
+</script>
+
+</body>
+</html>
